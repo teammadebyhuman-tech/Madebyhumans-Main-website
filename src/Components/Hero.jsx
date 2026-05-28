@@ -119,14 +119,16 @@ CREATIVE DEVELOPER
 className="
 mt-5
 
-text-[72px]
-md:text-[96px]
-
-leading-[0.9]
-
-font-black
-
-text-[#221445]
+font-display
+text-5xl
+sm:text-7xl
+md:text-8xl
+font-normal
+leading-[0.95]
+tracking-[-2.46px]
+max-w-7xl
+mx-auto
+text-foreground
 "
 >
 
@@ -134,23 +136,19 @@ Bold Ideas That
 
 <br/>
 
-Start With Vision.
+<em className="not-italic text-muted-foreground">Start With Vision.</em>
 
 </h1>
 
 <p
 className="
-mt-6
-
-max-w-[720px]
-
+text-muted-foreground
+text-base
+sm:text-lg
+max-w-2xl
+mt-8
+leading-relaxed
 mx-auto
-
-text-[20px]
-
-leading-[1.8]
-
-text-[#6c648b]
 "
 >
 

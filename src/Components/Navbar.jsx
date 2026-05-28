@@ -135,13 +135,12 @@ className="
 relative
 z-10
 
+font-display
 text-[38px]
 
-font-black
+not-italic
 
-italic
-
-tracking-[-2px]
+tracking-tight
 
 cursor-pointer
 

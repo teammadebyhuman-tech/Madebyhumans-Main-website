@@ -64,11 +64,12 @@ PROCESS
 
 <h2
 className="
+font-display
 mt-4
 text-[58px]
 md:text-[82px]
-font-black
-text-[#2b214c]
+font-normal
+text-foreground
 "
 >
 How We Build
@@ -322,9 +323,10 @@ ${isDelivery
 
 <h3
 className="
+font-display
 text-[34px]
-font-black
-text-[#2b214c]
+font-normal
+text-foreground
 "
 >
 
@@ -336,7 +338,7 @@ text-[#2b214c]
 className="
 mt-5
 
-text-[#6c648a]
+text-muted-foreground
 
 leading-[1.8]
 "

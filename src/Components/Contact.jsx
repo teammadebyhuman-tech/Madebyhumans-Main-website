@@ -90,12 +90,13 @@ text-center
 
 <h2
 className="
+font-display
 text-[48px]
 md:text-[76px]
 
 leading-[0.95]
 
-font-black
+font-normal
 
 text-white
 "

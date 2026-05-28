@@ -75,11 +75,12 @@ Selected Work
 
 <h2
 className="
+font-display
 text-[40px]
 md:text-[64px]
 leading-[0.9]
-font-black
-text-[#2b214c]
+font-normal
+text-foreground
 "
 >
 
@@ -180,12 +181,13 @@ duration-700
 
 <h3
 className="
+font-display
 text-[24px]
 md:text-[32px]
 
-font-black
+font-normal
 
-text-[#2b214c]
+text-foreground
 "
 >
 
@@ -196,7 +198,7 @@ text-[#2b214c]
 <p
 className="
 mt-2
-text-[#6a6287]
+text-muted-foreground
 "
 >
 

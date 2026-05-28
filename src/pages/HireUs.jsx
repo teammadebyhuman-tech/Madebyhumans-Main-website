@@ -24,9 +24,10 @@ text-center
 
 <h1
 className="
+font-display
 text-[72px]
-font-black
-text-[#2e214f]
+font-normal
+text-foreground
 "
 >
 
@@ -37,7 +38,7 @@ Hire Me
 <p
 className="
 mt-6
-text-[#655a83]
+text-muted-foreground
 "
 >
 

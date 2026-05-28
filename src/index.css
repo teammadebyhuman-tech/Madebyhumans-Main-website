@@ -1,8 +1,15 @@
 @import "tailwindcss";
 
+@theme {
+  --font-display: 'Instrument Serif', serif;
+  --font-body: 'Inter', sans-serif;
+  --color-foreground: #221445;
+  --color-muted-foreground: #6c648b;
+}
+
 body{
 margin:0;
-font-family:system-ui;
+font-family:var(--font-body);
 background:
 linear-gradient(
 180deg,

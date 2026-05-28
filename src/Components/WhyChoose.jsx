@@ -41,11 +41,12 @@ px-6
 
 <h2
 className="
+font-display
 text-[78px]
-font-black
-text-[#44346f]
+font-normal
+text-foreground
 mb-16
-tracking-[-3px]
+tracking-tight
 "
 >
 
@@ -118,9 +119,10 @@ mb-8
 
 <h3
 className="
+font-display
 text-[34px]
-font-black
-text-[#2d214e]
+font-normal
+text-foreground
 "
 >
 
@@ -131,7 +133,7 @@ text-[#2d214e]
 <p
 className="
 mt-6
-text-[#5b517a]
+text-muted-foreground
 leading-8
 "
 >

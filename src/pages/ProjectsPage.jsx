@@ -132,14 +132,15 @@ Back To Home
 
 <h1
 className="
+font-display
 text-[52px]
 md:text-[72px]
 
 leading-[0.9]
 
-font-black
+font-normal
 
-text-[#2b214c]
+text-foreground
 "
 >
 
@@ -157,7 +158,7 @@ text-[18px]
 
 leading-8
 
-text-[#655a83]
+text-muted-foreground
 "
 >
 

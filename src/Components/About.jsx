@@ -49,14 +49,15 @@ About
 
 <h2
 className="
+font-display
 text-[55px]
 md:text-[88px]
 
 leading-[0.9]
 
-font-black
+font-normal
 
-text-[#2c214b]
+text-foreground
 
 mt-4
 
@@ -81,7 +82,7 @@ mt-8
 
 max-w-[560px]
 
-text-[#645b84]
+text-muted-foreground
 
 leading-9
 

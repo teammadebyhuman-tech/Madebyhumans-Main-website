@@ -163,13 +163,14 @@ blur-[100px]
 
 <h2
 className="
+font-display
 text-[30px]
 
 md:text-[34px]
 
-font-black
+font-normal
 
-italic
+not-italic
 
 whitespace-nowrap
 
