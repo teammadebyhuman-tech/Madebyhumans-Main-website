@@ -1,5 +1,4 @@
-import { MdEmail } from "react-icons/md"
-import { FaPhoneAlt } from "react-icons/fa"
+import { Mail, Phone } from "lucide-react"
 
 export default function Footer(){
 
@@ -294,7 +293,7 @@ transition
 "
 >
 
-<MdEmail size={22}/>
+<Mail className="w-[22px] h-[22px]" />
 
 </div>
 
@@ -392,7 +391,7 @@ transition
 "
 >
 
-<FaPhoneAlt size={18}/>
+<Phone className="w-[18px] h-[18px]" />
 
 </div>
 

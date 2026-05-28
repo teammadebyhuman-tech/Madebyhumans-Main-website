@@ -1,5 +1,4 @@
-import { MdEmail } from "react-icons/md"
-import { FaPhoneAlt } from "react-icons/fa"
+import { Mail, Phone } from "lucide-react"
 
 export default function Contact(){
 
@@ -12,7 +11,8 @@ className="
 max-w-[1450px]
 mx-auto
 
-mt-10
+mt-12
+md:mt-20
 px-6
 
 "
@@ -24,18 +24,20 @@ relative
 
 overflow-hidden
 
-rounded-[50px]
+rounded-[36px]
+sm:rounded-[50px]
 
 bg-gradient-to-br
 
 from-[#7664a9]
 via-[#907dc8]
 to-[#ddd5ff]
-shadow-xl
-px-10
+px-6
+sm:px-10
 md:px-16
 
-py-14
+py-10
+md:py-14
 
 shadow-[0_30px_80px_rgba(105,82,170,.18)]
 "
@@ -91,7 +93,8 @@ text-center
 <h2
 className="
 font-display
-text-[48px]
+text-[38px]
+sm:text-[54px]
 md:text-[76px]
 
 leading-[0.95]
@@ -112,11 +115,13 @@ Build?
 
 <p
 className="
-mt-5
+mt-4
+md:mt-5
 
 text-white/80
 
-text-lg
+text-base
+sm:text-lg
 "
 >
 
@@ -126,7 +131,8 @@ Let’s create something memorable.
 
 <div
 className="
-mt-10
+mt-8
+md:mt-10
 
 flex
 
@@ -135,7 +141,8 @@ md:flex-row
 
 justify-center
 
-gap-6
+gap-4
+md:gap-6
 "
 >
 
@@ -149,10 +156,13 @@ relative
 
 overflow-hidden
 
-rounded-[32px]
+rounded-[24px]
+sm:rounded-[32px]
 
-px-8
-py-5
+px-6
+sm:px-8
+py-4
+sm:py-5
 
 bg-white/10
 
@@ -164,10 +174,10 @@ border-white/20
 
 shadow-[0_20px_60px_rgba(255,255,255,.08)]
 
-hover:-translate-y-2
+hover:-translate-y-1
 
 transition
-duration-700
+duration-500
 "
 >
 
@@ -195,14 +205,17 @@ flex
 
 items-center
 
-gap-5
+gap-4
+sm:gap-5
 "
 >
 
 <div
 className="
-w-16
-h-16
+w-12
+h-12
+sm:w-16
+sm:h-16
 
 rounded-full
 
@@ -228,7 +241,7 @@ transition
 "
 >
 
-<MdEmail size={30}/>
+<Mail className="w-5 h-5 sm:w-[30px] sm:h-[30px]" />
 
 </div>
 
@@ -240,7 +253,8 @@ text-white/60
 
 uppercase
 
-text-[12px]
+text-[10px]
+sm:text-[12px]
 "
 >
 
@@ -252,7 +266,9 @@ Email
 className="
 text-white
 
-text-[18px]
+text-sm
+sm:text-base
+md:text-[18px]
 "
 >
 
@@ -277,10 +293,13 @@ relative
 
 overflow-hidden
 
-rounded-[32px]
+rounded-[24px]
+sm:rounded-[32px]
 
-px-8
-py-5
+px-6
+sm:px-8
+py-4
+sm:py-5
 
 bg-white/10
 
@@ -292,10 +311,10 @@ border-white/20
 
 shadow-[0_20px_60px_rgba(255,255,255,.08)]
 
-hover:-translate-y-2
+hover:-translate-y-1
 
 transition
-duration-700
+duration-500
 "
 >
 
@@ -323,14 +342,17 @@ flex
 
 items-center
 
-gap-5
+gap-4
+sm:gap-5
 "
 >
 
 <div
 className="
-w-16
-h-16
+w-12
+h-12
+sm:w-16
+sm:h-16
 
 rounded-full
 
@@ -356,7 +378,7 @@ transition
 "
 >
 
-<FaPhoneAlt size={22}/>
+<Phone className="w-4 h-4 sm:w-[22px] sm:h-[22px]" />
 
 </div>
 
@@ -368,7 +390,8 @@ text-white/60
 
 uppercase
 
-text-[12px]
+text-[10px]
+sm:text-[12px]
 "
 >
 
@@ -380,7 +403,9 @@ Phone
 className="
 text-white
 
-text-[18px]
+text-sm
+sm:text-base
+md:text-[18px]
 "
 >
 

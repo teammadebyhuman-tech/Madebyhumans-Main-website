@@ -1,35 +1,35 @@
 import {
-FiSearch,
-FiPenTool,
-FiMonitor,
-FiCheckCircle
-} from "react-icons/fi"
+  Search,
+  PenTool,
+  Monitor,
+  CheckCircle2
+} from "lucide-react"
 
 const steps=[
 
 {
-icon:<FiSearch/>,
+icon:<Search/>,
 title:"Research",
 time:"1 Week",
 desc:"We explore goals and user needs to uncover the perfect direction."
 },
 
 {
-icon:<FiPenTool/>,
+icon:<PenTool/>,
 title:"Visual Design",
 time:"2 Weeks",
 desc:"Creating premium visuals and smooth interactions."
 },
 
 {
-icon:<FiMonitor/>,
+icon:<Monitor/>,
 title:"Prototype & Test",
 time:"1–2 Days",
 desc:"Testing and refining until every detail feels polished."
 },
 
 {
-icon:<FiCheckCircle/>,
+icon:<CheckCircle2/>,
 title:"Final Delivery",
 time:"1–2 Days",
 desc:"Delivering polished experiences ready for launch."
@@ -45,18 +45,21 @@ return(
 className="
 max-w-[1450px]
 mx-auto
-mt-24
+mt-16
+md:mt-24
 px-6
 "
 >
 
-<div className="text-center mb-20">
+<div className="text-center mb-12 md:mb-20">
 
 <p
 className="
 uppercase
 tracking-[8px]
 text-[#7b68ba]
+text-xs
+sm:text-sm
 "
 >
 PROCESS
@@ -66,9 +69,11 @@ PROCESS
 className="
 font-display
 mt-4
-text-[58px]
+text-[38px]
+sm:text-[58px]
 md:text-[82px]
 font-normal
+leading-none
 text-foreground
 "
 >
@@ -79,86 +84,39 @@ How We Build
 
 <div className="relative">
 
-{/* ARROWS */}
+<div className="space-y-8 lg:space-y-10 flex flex-col">
 
-<div className="hidden lg:block">
+{/* Row 1 */}
+<div className="flex flex-col lg:flex-row lg:justify-between items-center gap-8 lg:gap-0">
 
-<div className="absolute left-[42%] top-[120px]">
+  <Card step={steps[0]} index={0} />
 
-<div className="w-[180px] border-t border-dashed border-[#baa8ff]"/>
+  <div className="lg:mt-[90px] w-full max-w-[520px]">
 
-<div className="absolute right-0 h-[90px] border-r border-dashed border-[#baa8ff]"/>
+    <Card step={steps[1]} index={1} />
 
-<div className="absolute right-[-6px] bottom-[-90px] text-[#8b72dd]">
-↓
-</div>
-
-</div>
-
-<div className="absolute left-[40%] top-[360px]">
-
-<div className="h-[120px] border-l border-dashed border-[#baa8ff]"/>
-
-<div className="w-[240px] border-t border-dashed border-[#baa8ff]"/>
-
-<div className="absolute right-[-6px] bottom-[-6px] text-[#8b72dd]">
-→
-</div>
+  </div>
 
 </div>
 
-<div className="absolute right-[24%] bottom-[180px]">
+{/* Row 2 */}
+<div className="flex flex-col lg:flex-row lg:justify-between items-center gap-8 lg:gap-0">
 
-<div className="w-[220px] border-t border-dashed border-[#baa8ff]"/>
+  <div className="lg:ml-[70px] w-full max-w-[520px]">
 
-<div className="absolute right-0 h-[90px] border-r border-dashed border-[#baa8ff]"/>
+    <Card step={steps[2]} index={2} />
 
-<div className="absolute right-[-6px] bottom-[-90px] text-[#8b72dd]">
-↓
-</div>
+  </div>
 
-</div>
+  <div className="lg:mt-[60px] w-full max-w-[520px]">
 
-</div>
+    <Card
+      step={steps[3]}
+      index={3}
+      isDelivery
+    />
 
-
-
-
-
-<div className="space-y-10">
-
-<div className="flex justify-between">
-
-<Card step={steps[0]}/>
-
-<div className="mt-[90px]">
-
-<Card step={steps[1]}/>
-
-</div>
-
-</div>
-
-
-
-
-
-<div className="flex justify-between">
-
-<div className="ml-[70px]">
-
-<Card step={steps[2]}/>
-
-</div>
-
-<div className="mt-[60px]">
-
-<Card
-step={steps[3]}
-isDelivery
-/>
-
-</div>
+  </div>
 
 </div>
 
@@ -172,13 +130,9 @@ isDelivery
 
 }
 
-
-
-
-
-
 function Card({
 step,
+index,
 isDelivery=false
 }){
 
@@ -190,8 +144,11 @@ group
 
 relative
 
-w-[520px]
-h-[220px]
+w-full
+max-w-[520px]
+h-auto
+min-h-[220px]
+lg:h-[220px]
 
 rounded-[34px]
 
@@ -207,18 +164,25 @@ border
 
 border-white
 
-p-8
+p-6
+sm:p-8
 
 shadow-[0_35px_100px_rgba(132,108,210,.14)]
 
-hover:-translate-y-5
-hover:translate-x-3
+hover:-translate-y-2
+lg:hover:-translate-y-5
+lg:hover:translate-x-3
 
 transition-all
 
 duration-700
 "
 >
+
+{/* Background Number */}
+<div className="absolute top-4 right-6 sm:right-10 font-display text-[72px] sm:text-[96px] font-normal text-[#846dd9]/8 select-none pointer-events-none transition-all duration-500 group-hover:scale-105 group-hover:text-[#846dd9]/12">
+  0{index + 1}
+</div>
 
 <div
 className="
@@ -258,7 +222,8 @@ h-full
 
 <div
 className="
-w-[70px]
+w-[60px]
+sm:w-[70px]
 h-full
 
 rounded-full
@@ -274,47 +239,41 @@ flex
 
 flex-col
 
-justify-between
-
 items-center
+justify-center
+gap-4
+sm:gap-6
 
-py-6
+py-4
+sm:py-6
 
 shrink-0
 "
 >
 
-<div className="text-[24px]">
+<div className="text-[22px] sm:text-[28px]">
 
 {step.icon}
 
 </div>
 
-<div
-className="
-text-[12px]
-
-[writing-mode:vertical-rl]
-"
->
-
-{step.time}
-
+<div className="text-[9px] sm:text-[11px] font-bold text-white/95 tracking-wider uppercase select-none whitespace-nowrap">
+  {step.time}
 </div>
 
 </div>
-
-
-
-
 
 <div
 className={`
-ml-7
+ml-5
+sm:ml-7
+flex
+flex-col
+justify-center
 
 ${isDelivery
 ?
-"w-[180px]"
+"w-[125px] xs:w-[150px] sm:w-[180px]"
 :
 "flex-1"
 }
@@ -324,9 +283,11 @@ ${isDelivery
 <h3
 className="
 font-display
-text-[34px]
+text-[28px]
+sm:text-[36px]
 font-normal
 text-foreground
+leading-tight
 "
 >
 
@@ -336,11 +297,16 @@ text-foreground
 
 <p
 className="
-mt-5
+mt-2
+sm:mt-4
 
 text-muted-foreground
 
-leading-[1.8]
+text-[14px]
+sm:text-[18px]
+
+leading-relaxed
+sm:leading-[1.8]
 "
 >
 
@@ -350,10 +316,6 @@ leading-[1.8]
 
 </div>
 
-
-
-
-
 {
 
 isDelivery && (
@@ -362,14 +324,17 @@ isDelivery && (
 className="
 absolute
 
-right-[-35px]
+right-[-25px]
+sm:right-[-35px]
 
-bottom-[-32px]
+bottom-[-20px]
+sm:bottom-[-32px]
 
 h-full
 
 flex
 items-end
+pointer-events-none
 "
 >
 
@@ -379,7 +344,9 @@ src="/phone.png"
 alt=""
 
 className="
-w-[320px]
+w-[180px]
+sm:w-[260px]
+md:w-[320px]
 
 object-contain
 

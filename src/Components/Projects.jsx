@@ -238,25 +238,20 @@ navigate("/project")
 
 className="
 group
-
-bg-gradient-to-r
-
-from-[#8168d2]
-to-[#5d458e]
-
-text-white
-
+liquid-glass
+bg-purple-900/5
+text-[#5d458e]
+font-bold
 px-10
 py-4
-
 rounded-full
-
 hover:scale-105
-
-hover:shadow-[0_20px_60px_rgba(115,91,170,.35)]
-
-transition
+hover:-translate-y-0.5
+hover:bg-purple-900/10
+transition-all
 duration-500
+cursor-pointer
+shadow-[0_20px_70px_rgba(129,104,210,.12)]
 "
 >
 

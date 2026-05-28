@@ -33,7 +33,8 @@ id="why"
 className="
 max-w-[1450px]
 mx-auto
-mt-30
+mt-20
+md:mt-30
 px-6
 "
 
@@ -42,11 +43,15 @@ px-6
 <h2
 className="
 font-display
-text-[78px]
+text-[42px]
+sm:text-[60px]
+md:text-[78px]
 font-normal
 text-foreground
-mb-16
+mb-8
+md:mb-16
 tracking-tight
+leading-none
 "
 >
 
@@ -79,9 +84,11 @@ group
 
 rounded-[42px]
 
-p-10
+p-8
+sm:p-10
 
-min-h-[330px]
+min-h-[300px]
+sm:min-h-[330px]
 
 border
 
@@ -120,7 +127,8 @@ mb-8
 <h3
 className="
 font-display
-text-[34px]
+text-[28px]
+sm:text-[34px]
 font-normal
 text-foreground
 "
@@ -132,9 +140,13 @@ text-foreground
 
 <p
 className="
-mt-6
+mt-4
+sm:mt-6
 text-muted-foreground
-leading-8
+leading-relaxed
+sm:leading-8
+text-sm
+sm:text-base
 "
 >
 
