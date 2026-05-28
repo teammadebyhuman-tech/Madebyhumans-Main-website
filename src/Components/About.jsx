@@ -109,8 +109,8 @@ absolute
 bottom-0
 right-[-40px]
 
-w-[280px]
-md:w-[520px]
+w-[200px]
+md:w-[600px]
 
 object-contain
 

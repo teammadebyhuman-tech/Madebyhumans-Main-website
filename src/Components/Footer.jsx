@@ -9,7 +9,7 @@ return(
 className="
 max-w-[1450px]
 mx-auto
-mt-10
+mt-6
 mb-6
 px-6
 "
@@ -18,105 +18,170 @@ px-6
 <div
 className="
 relative
+
 overflow-hidden
 
-rounded-[34px]
+rounded-[36px]
 
 px-8
-md:px-12
+py-5
 
-py-8
+bg-white/30
 
-bg-white/40
-
-backdrop-blur-xl
+backdrop-blur-2xl
 
 border
-border-white
+border-white/40
 
-shadow-[0_30px_80px_rgba(120,95,180,.12)]
+shadow-[0_20px_80px_rgba(130,100,210,.12)]
 "
 >
+
+{/* BG GLOW */}
 
 <div
 className="
 absolute
-top-[-90px]
-left-[10%]
 
-w-[260px]
-h-[220px]
+left-[-120px]
+top-[-80px]
+
+w-[360px]
+h-[300px]
 
 bg-[#d8cfff]
 
-blur-[110px]
+blur-[150px]
 
-rounded-full
-
-opacity-70
+opacity-60
 "
 />
 
 <div
 className="
 absolute
-right-[-40px]
-bottom-[-60px]
 
-w-[220px]
-h-[220px]
+right-[-120px]
+bottom-[-120px]
+
+w-[320px]
+h-[320px]
 
 bg-[#9f8cf0]
 
-blur-[120px]
+blur-[150px]
 
-rounded-full
-
-opacity-30
+opacity-20
 "
 />
 
 <div
 className="
 relative
+
 z-10
 
-flex
-flex-col
-md:flex-row
+grid
 
-justify-between
+md:grid-cols-[360px_1fr_300px]
 
 items-center
 
-gap-8
+gap-6
 "
 >
 
-<div>
+{/* LEFT */}
+
+<div
+className="
+relative
+
+rounded-[32px]
+
+overflow-hidden
+
+px-8
+py-8
+
+bg-gradient-to-br
+
+from-[#faf7ff]
+via-[#f3eeff]
+to-[#ece4ff]
+
+border
+
+border-white/80
+
+shadow-[0_25px_100px_rgba(135,110,220,.22)]
+
+hover:-translate-y-1
+
+transition
+duration-700
+"
+>
+
+<div
+className="
+absolute
+
+left-[-60px]
+top-[-60px]
+
+w-[240px]
+h-[240px]
+
+bg-[#bdaeff]
+
+blur-[120px]
+
+opacity-70
+
+animate-pulse
+"
+/>
+
+<div
+className="
+absolute
+
+right-[-40px]
+bottom-[-50px]
+
+w-[180px]
+h-[180px]
+
+bg-[#e2d8ff]
+
+blur-[100px]
+"
+/>
+
+<div className="relative z-10">
 
 <h2
 className="
-text-[42px]
+text-[30px]
+
+md:text-[34px]
 
 font-black
 
 italic
 
-tracking-[-2px]
+whitespace-nowrap
 
 bg-gradient-to-r
-from-[#8a75d9]
-via-[#705aa9]
-to-[#43306f]
+
+from-[#9178ec]
+via-[#6f56b2]
+to-[#3e2d68]
 
 bg-clip-text
 
 text-transparent
-
-hover:scale-105
-
-transition
 "
 >
 
@@ -126,11 +191,13 @@ SONIYA and PAGAL
 
 <p
 className="
-mt-1
+mt-3
 
-text-[#6b5d92]
+text-[#6d6191]
 
-text-[15px]
+text-[14px]
+
+tracking-[1px]
 "
 >
 
@@ -140,15 +207,23 @@ Freelance Web Developer
 
 </div>
 
+</div>
+{/* IMAGE */}
 
+<div
+className="
+flex
+justify-center
+"
+>
 
-
+</div>
+{/* RIGHT */}
 
 <div
 className="
 flex
 flex-col
-sm:flex-row
 
 gap-4
 "
@@ -160,35 +235,51 @@ href="mailto:yourmail@gmail.com"
 className="
 group
 
+rounded-[26px]
+
+px-5
+py-4
+
+bg-white/14
+
+backdrop-blur-xl
+
+border
+
+border-white/30
+
+hover:bg-white/20
+
+hover:-translate-x-2
+
+transition
+duration-500
+"
+
+>
+
+<div
+className="
 flex
 
 items-center
 
-gap-3
-
-px-5
-py-3
-
-rounded-full
-
-bg-white/50
-
-hover:bg-[#ede7ff]
-
-transition
+gap-4
 "
 >
 
 <div
 className="
-w-10
-h-10
+w-12
+h-12
 
 rounded-full
 
-bg-[#8168d2]
+bg-white/20
 
-text-white
+backdrop-blur-xl
+
+text-[#745fbe]
 
 flex
 
@@ -202,27 +293,41 @@ transition
 "
 >
 
-<MdEmail size={18}/>
+<MdEmail size={22}/>
 
 </div>
 
-<span
-className="
-text-[#584b7f]
+<div>
 
-text-[14px]
+<p
+className="
+uppercase
+
+text-[11px]
+
+text-[#8b7cb8]
+"
+>
+
+Email
+
+</p>
+
+<p
+className="
+text-[#4f4077]
 "
 >
 
 yourmail@gmail.com
 
-</span>
+</p>
+
+</div>
+
+</div>
 
 </a>
-
-
-
-
 
 <a
 href="tel:+919999999999"
@@ -230,35 +335,49 @@ href="tel:+919999999999"
 className="
 group
 
+rounded-[26px]
+
+px-5
+py-4
+
+bg-white/14
+
+backdrop-blur-xl
+
+border
+
+border-white/30
+
+hover:bg-white/20
+
+hover:-translate-x-2
+
+transition
+duration-500
+"
+
+>
+
+<div
+className="
 flex
 
 items-center
 
-gap-3
-
-px-5
-py-3
-
-rounded-full
-
-bg-white/50
-
-hover:bg-[#ede7ff]
-
-transition
+gap-4
 "
 >
 
 <div
 className="
-w-10
-h-10
+w-12
+h-12
 
 rounded-full
 
-bg-[#705aa9]
+bg-white/20
 
-text-white
+text-[#745fbe]
 
 flex
 
@@ -272,21 +391,39 @@ transition
 "
 >
 
-<FaPhoneAlt size={14}/>
+<FaPhoneAlt size={18}/>
 
 </div>
 
-<span
-className="
-text-[#584b7f]
+<div>
 
-text-[14px]
+<p
+className="
+uppercase
+
+text-[11px]
+
+text-[#8b7cb8]
+"
+>
+
+Phone
+
+</p>
+
+<p
+className="
+text-[#4f4077]
 "
 >
 
 +91 99999 99999
 
-</span>
+</p>
+
+</div>
+
+</div>
 
 </a>
 

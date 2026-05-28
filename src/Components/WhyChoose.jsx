@@ -33,7 +33,7 @@ id="why"
 className="
 max-w-[1450px]
 mx-auto
-mt-36
+mt-30
 px-6
 "
 
@@ -60,6 +60,7 @@ grid-cols-1
 md:grid-cols-2
 lg:grid-cols-4
 gap-8
+
 "
 >
 
