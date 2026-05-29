@@ -38,8 +38,11 @@ export default function Hero() {
           src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260511_230229_7c9bc431-46cf-489a-948d-e8144d8eb5d4.mp4"
         />
 
-        {/* Cinematic Vignette Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/40 z-10" />
+        {/* Cinematic Vignette Overlay (Lightened and tinted) */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-purple-950/10 to-black/25 z-10" />
+
+        {/* Big Light Ambient Glow (Lavender, Violet, White) */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[650px] h-[300px] sm:h-[650px] bg-gradient-to-tr from-[#d8cfff] via-[#9f8cf0] to-white blur-[100px] sm:blur-[160px] rounded-full opacity-30 z-10 pointer-events-none" />
 
         {/* Hero Content (Centered Flex) */}
         <div

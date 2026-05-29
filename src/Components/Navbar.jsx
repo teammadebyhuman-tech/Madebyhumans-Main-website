@@ -26,7 +26,7 @@ export default function Navbar() {
 
   return (
     <header className="max-w-[1450px] mx-auto pt-5 px-6 relative z-50">
-      <div className="relative overflow-hidden rounded-[34px] px-6 md:px-14 py-4 md:py-5 flex justify-between items-center bg-white/40 backdrop-blur-xl border border-white shadow-[0_30px_80px_rgba(120,95,180,.12)]">
+      <div className="relative overflow-hidden rounded-[34px] px-6 md:px-14 py-4 md:py-5 flex justify-between items-center bg-gradient-to-r from-[#d8cfff]/35 via-white/80 to-[#9f8cf0]/25 backdrop-blur-xl border border-white shadow-[0_30px_80px_rgba(120,95,180,.12)]">
         {/* Glow Effects */}
         <div className="absolute top-[-100px] left-[20%] w-[320px] h-[250px] bg-[#d8cfff] blur-[100px] rounded-full opacity-70 pointer-events-none" />
         <div className="absolute right-[-50px] top-[-50px] w-[220px] h-[220px] bg-[#9f8cf0] blur-[120px] rounded-full opacity-30 pointer-events-none" />
