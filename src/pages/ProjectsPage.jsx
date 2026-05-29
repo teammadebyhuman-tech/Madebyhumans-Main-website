@@ -151,19 +151,18 @@ export default function ProjectsPage() {
             key={index}
             className="
               group
+              relative
               rounded-[28px]
               overflow-hidden
-              bg-white/50
-              backdrop-blur-xl
-              border
-              border-white
-              shadow-[0_20px_60px_rgba(120,95,180,.10)]
+              flex
+              flex-col
+              shadow-[0_20px_60px_rgba(120,95,180,0.10)]
               hover:-translate-y-2
               transition
               duration-500
             "
           >
-            <div className="relative overflow-hidden">
+            <div className="relative overflow-hidden z-10 rounded-t-[28px]">
               <img
                 src={project.img}
                 alt={project.title}
@@ -180,14 +179,18 @@ export default function ProjectsPage() {
               />
             </div>
 
-            <div className="p-6">
+            {/* Glassmorphic glow overlay matching our buttons */}
+            <div className="absolute right-[-40px] bottom-[-40px] w-[180px] h-[180px] bg-[#ddd5ff]/70 blur-[90px] pointer-events-none z-0" />
+
+            <div className="p-6 relative z-10 w-full liquid-glass rounded-b-[28px] text-left">
               <h3
                 className="
                   font-display
-                  text-[24px]
-                  md:text-[32px]
+                  text-[20px]
+                  md:text-[26px]
                   font-normal
-                  text-foreground
+                  text-[#43306f]
+                  leading-tight
                 "
               >
                 {project.title}
@@ -195,9 +198,10 @@ export default function ProjectsPage() {
               <p
                 className="
                   mt-2
-                  text-sm
-                  sm:text-base
-                  text-muted-foreground
+                  text-[#7b68ba]
+                  text-xs
+                  md:text-sm
+                  font-medium
                 "
               >
                 {project.stack}

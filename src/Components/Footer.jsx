@@ -1,4 +1,4 @@
-import { Mail, Phone } from "lucide-react"
+import { Mail } from "lucide-react"
 
 export default function Footer(){
 
@@ -185,7 +185,7 @@ text-transparent
 "
 >
 
-SONIYA and PAGAL
+madebyhuman
 
 </h2>
 
@@ -201,7 +201,7 @@ tracking-[1px]
 "
 >
 
-Freelance Web Developer
+Digital Experience Agency
 
 </p>
 
@@ -230,7 +230,7 @@ gap-4
 >
 
 <a
-href="mailto:yourmail@gmail.com"
+href="mailto:team.madebyhuman@gmail.com"
 
 className="
 group
@@ -319,7 +319,7 @@ text-[#4f4077]
 "
 >
 
-yourmail@gmail.com
+team.madebyhuman@gmail.com
 
 </p>
 
@@ -330,7 +330,9 @@ yourmail@gmail.com
 </a>
 
 <a
-href="tel:+919999999999"
+href="https://www.linkedin.com/in/yadavkishan10/"
+target="_blank"
+rel="noopener noreferrer"
 
 className="
 group
@@ -391,7 +393,11 @@ transition
 "
 >
 
-<Phone className="w-[18px] h-[18px]" />
+<svg className="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+  <rect width="4" height="12" x="2" y="9" />
+  <circle cx="4" cy="4" r="2" />
+</svg>
 
 </div>
 
@@ -407,7 +413,7 @@ text-[#8b7cb8]
 "
 >
 
-Phone
+LinkedIn
 
 </p>
 
@@ -417,7 +423,7 @@ text-[#4f4077]
 "
 >
 
-+91 99999 99999
+yadavkishan10
 
 </p>
 

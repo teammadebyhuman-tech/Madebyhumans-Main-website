@@ -33,11 +33,12 @@ export default function HireUs(){
           Need a premium website, high-converting landing page, or custom React application? Let's discuss your project goals.
         </p>
         
-        <button
-          className="mt-8 w-full sm:w-auto liquid-glass bg-purple-900/5 text-[#5d458e] hover:bg-purple-900/10 font-bold px-10 py-4.5 rounded-full hover:scale-105 hover:-translate-y-0.5 transition-all duration-500 cursor-pointer shadow-[0_20px_70px_rgba(129,104,210,0.15)]"
+        <a
+          href="mailto:team.madebyhuman@gmail.com"
+          className="inline-block text-center mt-8 w-full sm:w-auto liquid-glass bg-purple-900/5 text-[#5d458e] hover:bg-purple-900/10 font-bold px-10 py-4.5 rounded-full hover:scale-105 hover:-translate-y-0.5 transition-all duration-500 cursor-pointer shadow-[0_20px_70px_rgba(129,104,210,0.15)]"
         >
           Book Project
-        </button>
+        </a>
       </div>
     </div>
   )

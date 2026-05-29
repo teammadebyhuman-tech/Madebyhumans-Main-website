@@ -1,35 +1,36 @@
+import { motion } from "framer-motion"
 import {
-  Search,
   PenTool,
   Monitor,
   CheckCircle2
 } from "lucide-react"
+import { MdOutlineManageSearch } from "react-icons/md"
 
 const steps=[
 
 {
-icon:<Search/>,
+icon:<MdOutlineManageSearch size={52} />,
 title:"Research",
 time:"1 Week",
 desc:"We explore goals and user needs to uncover the perfect direction."
 },
 
 {
-icon:<PenTool/>,
+icon:<PenTool size={46} />,
 title:"Visual Design",
 time:"2 Weeks",
 desc:"Creating premium visuals and smooth interactions."
 },
 
 {
-icon:<Monitor/>,
+icon:<Monitor size={46} />,
 title:"Prototype & Test",
 time:"1–2 Days",
 desc:"Testing and refining until every detail feels polished."
 },
 
 {
-icon:<CheckCircle2/>,
+icon:<CheckCircle2 size={46} />,
 title:"Final Delivery",
 time:"1–2 Days",
 desc:"Delivering polished experiences ready for launch."
@@ -41,7 +42,11 @@ export default function Process(){
 
 return(
 
-<section
+<motion.section
+initial={{ opacity: 0, y: 50 }}
+whileInView={{ opacity: 1, y: 0 }}
+viewport={{ once: true, margin: "-100px" }}
+transition={{ duration: 0.8, ease: "easeOut" }}
 className="
 max-w-[1450px]
 mx-auto
@@ -84,10 +89,10 @@ How We Build
 
 <div className="relative">
 
-<div className="space-y-8 lg:space-y-10 flex flex-col">
+<div className="space-y-12 lg:space-y-24 flex flex-col">
 
 {/* Row 1 */}
-<div className="flex flex-col lg:flex-row lg:justify-between items-center gap-8 lg:gap-0">
+<div className="flex flex-col lg:flex-row lg:justify-between items-center gap-12 lg:gap-0">
 
   <Card step={steps[0]} index={0} />
 
@@ -100,7 +105,7 @@ How We Build
 </div>
 
 {/* Row 2 */}
-<div className="flex flex-col lg:flex-row lg:justify-between items-center gap-8 lg:gap-0">
+<div className="flex flex-col lg:flex-row lg:justify-between items-center gap-12 lg:gap-0">
 
   <div className="lg:ml-[70px] w-full max-w-[520px]">
 
@@ -108,7 +113,7 @@ How We Build
 
   </div>
 
-  <div className="lg:mt-[60px] w-full max-w-[520px]">
+  <div className="lg:mt-[120px] w-full max-w-[520px]">
 
     <Card
       step={steps[3]}
@@ -124,7 +129,7 @@ How We Build
 
 </div>
 
-</section>
+</motion.section>
 
 )
 
@@ -152,7 +157,7 @@ lg:h-[220px]
 
 rounded-[34px]
 
-overflow-hidden
+
 
 bg-gradient-to-br
 
@@ -167,7 +172,7 @@ border-white
 p-6
 sm:p-8
 
-shadow-[0_35px_100px_rgba(132,108,210,.14)]
+shadow-xl
 
 hover:-translate-y-2
 lg:hover:-translate-y-5
@@ -222,6 +227,7 @@ h-full
 
 <div
 className="
+relative
 w-[60px]
 sm:w-[70px]
 h-full
@@ -251,10 +257,15 @@ shrink-0
 "
 >
 
-<div className="text-[22px] sm:text-[28px]">
-
-{step.icon}
-
+<div className="relative w-full flex items-center justify-center">
+  {/* Raw floating 3D icon - Positioned Left and enlarged by 150% more per user request */}
+  <div className="absolute left-[-22px] sm:left-[-26px] text-[#3e2d68] z-30 transition-all duration-500 group-hover:scale-[1.1] filter drop-shadow-[0_6px_12px_rgba(92,71,143,0.35)] group-hover:drop-shadow-[0_10px_18px_rgba(92,71,143,0.5)]">
+    <div className="scale-[2.5] flex items-center justify-center">
+      {step.icon}
+    </div>
+  </div>
+  {/* Invisible spacer to maintain layout height in the flex-col container */}
+  <div className="w-12 h-12 sm:w-14 sm:h-14 invisible" />
 </div>
 
 <div className="text-[9px] sm:text-[11px] font-bold text-white/95 tracking-wider uppercase select-none whitespace-nowrap">
@@ -265,8 +276,8 @@ shrink-0
 
 <div
 className={`
-ml-5
-sm:ml-7
+ml-6
+sm:ml-8
 flex
 flex-col
 justify-center
@@ -317,24 +328,24 @@ sm:leading-[1.8]
 </div>
 
 {
-
 isDelivery && (
 
 <div
 className="
 absolute
-
-right-[-25px]
-sm:right-[-35px]
-
-bottom-[-20px]
-sm:bottom-[-32px]
-
-h-full
-
+right-[-80px]
+sm:right-[-110px]
+lg:right-[-160px]
+bottom-[-26px]
+sm:bottom-[-30px]
+lg:bottom-[-33px]
+h-[260px]
+sm:h-[300px]
+lg:h-[330px]
 flex
 items-end
 pointer-events-none
+z-20
 "
 >
 
@@ -344,15 +355,10 @@ src="/phone.png"
 alt=""
 
 className="
-w-[180px]
-sm:w-[260px]
-md:w-[320px]
-
+h-full
 object-contain
 
 animate-[float_6s_ease-in-out_infinite]
-
-mix-blend-darken
 
 drop-shadow-[0_20px_60px_rgba(110,90,220,.18)]
 "
@@ -361,7 +367,6 @@ drop-shadow-[0_20px_60px_rgba(110,90,220,.18)]
 </div>
 
 )
-
 }
 
 </div>

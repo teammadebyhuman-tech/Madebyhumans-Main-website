@@ -1,4 +1,26 @@
+import { useEffect, useRef } from "react";
+import Hls from "hls.js";
+
 export default function Hero() {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const videoSrc = "https://stream.mux.com/kimF2ha9zLrX64H00UgLGPflCzNtl1T0215MlAmeOztv8.m3u8";
+
+    if (Hls.isSupported()) {
+      const hls = new Hls();
+      hls.loadSource(videoSrc);
+      hls.attachMedia(video);
+      return () => {
+        hls.destroy();
+      };
+    } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+      video.src = videoSrc;
+    }
+  }, []);
 
   const handleScroll = () => {
     const section = document.getElementById("contact");
@@ -30,12 +52,12 @@ export default function Hero() {
       >
         {/* Background Looping Video */}
         <video
+          ref={videoRef}
           className="absolute inset-0 w-full h-full object-cover z-0"
           autoPlay
           muted
           loop
           playsInline
-          src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260511_230229_7c9bc431-46cf-489a-948d-e8144d8eb5d4.mp4"
         />
 
         {/* Cinematic Vignette Overlay (Lightened and tinted) */}

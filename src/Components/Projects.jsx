@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom"
+import { motion } from "framer-motion"
 
 const projects=[
 
@@ -34,9 +35,13 @@ const navigate=useNavigate()
 
 return(
 
-<section
+<motion.section
 
 id="projects"
+initial={{ opacity: 0, y: 50 }}
+whileInView={{ opacity: 1, y: 0 }}
+viewport={{ once: true, margin: "-100px" }}
+transition={{ duration: 0.8, ease: "easeOut" }}
 
 className="
 max-w-[1400px]
@@ -47,58 +52,25 @@ px-6
 
 >
 
-<div
-className="
-flex
-flex-col
-md:flex-row
-justify-between
-gap-6
-mb-10
-
-"
->
-
-<div>
-
-<p
-className="
-uppercase
-tracking-[4px]
-text-[#6f5ea0]
-"
->
-
-Selected Work
-
-</p>
+<div className="text-center mb-10 md:mb-14">
 
 <h2
 className="
 font-display
-text-[40px]
-md:text-[64px]
-leading-[0.9]
+text-[38px]
+sm:text-[58px]
+md:text-[82px]
+leading-none
 font-normal
 text-foreground
 "
 >
 
-Featured
-
-<br/>
-
-Projects
+Featured Projects
 
 </h2>
 
 </div>
-
-</div>
-
-
-
-
 
 
 
@@ -108,7 +80,6 @@ grid
 grid-cols-1
 md:grid-cols-2
 gap-5
-
 "
 >
 
@@ -117,35 +88,22 @@ gap-5
 projects.map((project,index)=>(
 
 <div
-
 key={index}
-
 className="
 group
-
+relative
 rounded-[28px]
-
 overflow-hidden
-
-bg-white/50
-
-backdrop-blur-xl
-
-border
-
-border-white
-
+flex
+flex-col
 shadow-[0_20px_60px_rgba(120,95,180,.10)]
-
 hover:-translate-y-2
-
 transition
 duration-500
 "
-
 >
 
-<div className="relative">
+<div className="relative z-10 overflow-hidden rounded-t-[28px]">
 
 <img
 
@@ -171,23 +129,19 @@ duration-700
 
 </div>
 
+{/* Glassmorphic glow overlay matching our buttons */}
+<div className="absolute right-[-40px] bottom-[-40px] w-[180px] h-[180px] bg-[#ddd5ff]/70 blur-[90px] pointer-events-none z-0" />
 
-
-
-
-
-
-<div className="p-6">
+<div className="p-6 relative z-10 w-full liquid-glass rounded-b-[28px] text-left">
 
 <h3
 className="
 font-display
-text-[24px]
-md:text-[32px]
-
+text-[20px]
+md:text-[26px]
 font-normal
-
-text-foreground
+text-[#43306f]
+leading-tight
 "
 >
 
@@ -198,7 +152,10 @@ text-foreground
 <p
 className="
 mt-2
-text-muted-foreground
+text-[#7b68ba]
+text-xs
+md:text-sm
+font-medium
 "
 >
 
@@ -238,45 +195,61 @@ navigate("/project")
 
 className="
 group
-liquid-glass
-bg-purple-900/5
+relative
+overflow-hidden
+rounded-[24px]
+sm:rounded-[32px]
+px-10
+py-5
+bg-white/10
+backdrop-blur-2xl
+border
+border-white/20
+shadow-[0_20px_60px_rgba(120,95,180,0.15)]
 text-[#5d458e]
 font-bold
-px-10
-py-4
-rounded-full
-hover:scale-105
-hover:-translate-y-0.5
-hover:bg-purple-900/10
-transition-all
+hover:-translate-y-1
+hover:bg-white/20
+transition
 duration-500
 cursor-pointer
-shadow-[0_20px_70px_rgba(129,104,210,.12)]
 "
 >
 
+{/* Glow overlay to match Contact page button aesthetic */}
+<div
+className="
+absolute
+right-[-30px]
+bottom-[-40px]
+w-[150px]
+h-[150px]
+bg-[#ddd1ff]/70
+blur-[90px]
+pointer-events-none
+"
+/>
+
+<span className="relative z-10">
 View More Projects
 
 <span
 className="
 inline-block
 ml-2
-
 group-hover:translate-x-2
-
 transition
 "
 >
-
 →
-
+</span>
 </span>
 
 </button>
 
 </div>
 
-</section>
+</motion.section>
 
 )
 

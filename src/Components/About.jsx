@@ -1,9 +1,15 @@
+import { motion } from "framer-motion"
+
 export default function About(){
 
 return(
 
-<section
+<motion.section
 id="about"
+initial={{ opacity: 0, y: 50 }}
+whileInView={{ opacity: 1, y: 0 }}
+viewport={{ once: true, margin: "-100px" }}
+transition={{ duration: 0.8, ease: "easeOut" }}
 className="
 max-w-[1450px]
 mx-auto
@@ -148,7 +154,7 @@ z-10
 
 </div>
 
-</section>
+</motion.section>
 
 )
 

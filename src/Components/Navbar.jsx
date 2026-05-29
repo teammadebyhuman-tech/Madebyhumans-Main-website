@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { Menu, X, Infinity as InfinityIcon } from "lucide-react"
+import { motion } from "framer-motion"
 
 export default function Navbar() {
   const navigate = useNavigate()
@@ -38,30 +39,36 @@ export default function Navbar() {
         >
           <InfinityIcon className="text-[#705aa9] group-hover:scale-110 transition duration-300" size={28} strokeWidth={1.5} />
           <h1 className="font-display text-[26px] md:text-[34px] not-italic tracking-tight bg-gradient-to-r from-[#8a75d9] via-[#705aa9] to-[#43306f] bg-clip-text text-transparent hover:scale-105 transition duration-300">
-            hey.. start
+            madebyhuman
           </h1>
         </div>
 
         {/* Desktop Nav Links */}
         <nav className="relative z-10 hidden md:flex gap-8 text-[#584b7f] font-medium">
-          <button
+          <motion.button
             onClick={() => scrollTo("about")}
+            whileHover={{ y: -4 }}
+            transition={{ type: "spring", stiffness: 500, damping: 15 }}
             className="relative hover:text-[#775ec5] transition after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-[#775ec5] hover:after:w-full after:transition-all cursor-pointer"
           >
             About
-          </button>
-          <button
+          </motion.button>
+          <motion.button
             onClick={() => scrollTo("projects")}
+            whileHover={{ y: -4 }}
+            transition={{ type: "spring", stiffness: 500, damping: 15 }}
             className="relative hover:text-[#775ec5] transition after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-[#775ec5] hover:after:w-full after:transition-all cursor-pointer"
           >
             Projects
-          </button>
-          <button
+          </motion.button>
+          <motion.button
             onClick={() => scrollTo("contact")}
+            whileHover={{ y: -4 }}
+            transition={{ type: "spring", stiffness: 500, damping: 15 }}
             className="relative hover:text-[#775ec5] transition after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-[#775ec5] hover:after:w-full after:transition-all cursor-pointer"
           >
             Contact
-          </button>
+          </motion.button>
         </nav>
 
         {/* Desktop CTA */}
@@ -87,24 +94,30 @@ export default function Navbar() {
       {menuOpen && (
         <div className="absolute top-[74px] left-6 right-6 z-40 md:hidden bg-white/95 backdrop-blur-2xl border border-white/60 rounded-3xl p-6 flex flex-col gap-4 shadow-[0_20px_60px_rgba(120,95,180,0.15)] animate-[slideDown_0.3s_ease-out]">
           <nav className="flex flex-col gap-1">
-            <button
+            <motion.button
               onClick={() => scrollTo("about")}
+              whileHover={{ y: -2 }}
+              transition={{ type: "spring", stiffness: 500, damping: 15 }}
               className="flex items-center justify-between w-full px-4 py-3 rounded-xl text-[#584b7f] hover:bg-purple-900/5 hover:text-[#775ec5] font-medium text-left transition-colors cursor-pointer"
             >
               About
-            </button>
-            <button
+            </motion.button>
+            <motion.button
               onClick={() => scrollTo("projects")}
+              whileHover={{ y: -2 }}
+              transition={{ type: "spring", stiffness: 500, damping: 15 }}
               className="flex items-center justify-between w-full px-4 py-3 rounded-xl text-[#584b7f] hover:bg-purple-900/5 hover:text-[#775ec5] font-medium text-left transition-colors cursor-pointer"
             >
               Projects
-            </button>
-            <button
+            </motion.button>
+            <motion.button
               onClick={() => scrollTo("contact")}
+              whileHover={{ y: -2 }}
+              transition={{ type: "spring", stiffness: 500, damping: 15 }}
               className="flex items-center justify-between w-full px-4 py-3 rounded-xl text-[#584b7f] hover:bg-purple-900/5 hover:text-[#775ec5] font-medium text-left transition-colors cursor-pointer"
             >
               Contact
-            </button>
+            </motion.button>
           </nav>
           
           <div className="pt-3 border-t border-purple-900/10 flex flex-col gap-2">

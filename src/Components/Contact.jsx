@@ -1,11 +1,16 @@
-import { Mail, Phone } from "lucide-react"
+import { Mail } from "lucide-react"
+import { motion } from "framer-motion"
 
 export default function Contact(){
 
 return(
 
-<section
+<motion.section
 id="contact"
+initial={{ opacity: 0, y: 50 }}
+whileInView={{ opacity: 1, y: 0 }}
+viewport={{ once: true, margin: "-100px" }}
+transition={{ duration: 0.8, ease: "easeOut" }}
 
 className="
 max-w-[1450px]
@@ -147,7 +152,7 @@ md:gap-6
 >
 
 <a
-href="mailto:yourmail@gmail.com"
+href="mailto:team.madebyhuman@gmail.com"
 
 className="
 group
@@ -272,7 +277,7 @@ md:text-[18px]
 "
 >
 
-yourmail@gmail.com
+team.madebyhuman@gmail.com
 
 </p>
 
@@ -284,7 +289,9 @@ yourmail@gmail.com
 
 
 <a
-href="tel:+919999999999"
+href="https://www.linkedin.com/in/yadavkishan10/"
+target="_blank"
+rel="noopener noreferrer"
 
 className="
 group
@@ -378,7 +385,11 @@ transition
 "
 >
 
-<Phone className="w-4 h-4 sm:w-[22px] sm:h-[22px]" />
+<svg className="w-4 h-4 sm:w-[22px] sm:h-[22px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+  <rect width="4" height="12" x="2" y="9" />
+  <circle cx="4" cy="4" r="2" />
+</svg>
 
 </div>
 
@@ -395,7 +406,7 @@ sm:text-[12px]
 "
 >
 
-Phone
+LinkedIn
 
 </p>
 
@@ -409,7 +420,7 @@ md:text-[18px]
 "
 >
 
-+91 99999 99999
+yadavkishan10
 
 </p>
 
@@ -425,7 +436,7 @@ md:text-[18px]
 
 </div>
 
-</section>
+</motion.section>
 
 )
 
