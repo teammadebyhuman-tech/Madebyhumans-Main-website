@@ -1,30 +1,35 @@
 import { useNavigate } from "react-router-dom"
 import { motion } from "framer-motion"
+import { ArrowRight } from "lucide-react"
 
 const projects=[
 
 {
-title:"Luxury Landing Page",
-stack:"React • Tailwind",
-img:"/project1.png",
-},
-
-{
-title:"Business Website",
+title:"Cellquestindia.com",
 stack:"React • UI Design",
-img:"/project2.png",
+img:"/project_cellquest.png",
+link:"https://cellquestindia.com/"
 },
 
 {
-title:"Creative Portfolio",
-stack:"React • Animation",
-img:"/project3.jpg",
+title:"Future and AI",
+stack:"React • Landing Page",
+img:"/project_futureandai.png",
+link:"https://www.futureandai.in/"
 },
 
 {
-title:"Startup Website",
-stack:"React • Framer Motion",
-img:"/project4.jpg",
+title:"APES Community",
+stack:"React • Community UI",
+img:"/project_apes.png",
+link:"https://apes.lla.in/"
+},
+
+{
+title:"Viral Monk",
+stack:"React • Video Creation",
+img:"/project_viralmonk.png",
+link:"https://viralmonk.futureandai.in/"
 }
 
 ]
@@ -87,8 +92,11 @@ gap-5
 
 projects.map((project,index)=>(
 
-<div
+<a
 key={index}
+href={project.link}
+target="_blank"
+rel="noopener noreferrer"
 className="
 group
 relative
@@ -132,8 +140,9 @@ duration-700
 {/* Glassmorphic glow overlay matching our buttons */}
 <div className="absolute right-[-40px] bottom-[-40px] w-[180px] h-[180px] bg-[#ddd5ff]/70 blur-[90px] pointer-events-none z-0" />
 
-<div className="p-6 relative z-10 w-full liquid-glass rounded-b-[28px] text-left">
+<div className="p-6 relative z-10 w-full liquid-glass rounded-b-[28px] flex items-center justify-between text-left">
 
+<div>
 <h3
 className="
 font-display
@@ -162,10 +171,15 @@ font-medium
 {project.stack}
 
 </p>
+</div>
 
+<div className="w-10 h-10 sm:w-12 sm:h-12 shrink-0 rounded-full bg-[#f1ecff] border border-white/60 flex items-center justify-center text-[#5c478f] group-hover:-rotate-45 group-hover:bg-[#846dd9] group-hover:text-white group-hover:shadow-lg transition-all duration-500 shadow-sm ml-4">
+  <ArrowRight size={20} />
 </div>
 
 </div>
+
+</a>
 
 ))
 

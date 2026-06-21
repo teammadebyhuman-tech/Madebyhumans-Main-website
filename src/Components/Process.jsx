@@ -258,9 +258,9 @@ shrink-0
 >
 
 <div className="relative w-full flex items-center justify-center">
-  {/* Raw floating 3D icon - Positioned Left and enlarged by 150% more per user request */}
-  <div className="absolute left-[-22px] sm:left-[-26px] text-[#3e2d68] z-30 transition-all duration-500 group-hover:scale-[1.1] filter drop-shadow-[0_6px_12px_rgba(92,71,143,0.35)] group-hover:drop-shadow-[0_10px_18px_rgba(92,71,143,0.5)]">
-    <div className="scale-[2.5] flex items-center justify-center">
+  {/* Raw floating 3D icon - Positioned on right edge of purple pill */}
+  <div className="absolute left-[30px] sm:left-[35px] text-[#3e2d68] z-30 transition-all duration-500 group-hover:scale-110 filter drop-shadow-[0_6px_12px_rgba(92,71,143,0.35)] group-hover:drop-shadow-[0_10px_18px_rgba(92,71,143,0.5)]">
+    <div className="scale-[1.4] sm:scale-[1.5] flex items-center justify-center">
       {step.icon}
     </div>
   </div>
