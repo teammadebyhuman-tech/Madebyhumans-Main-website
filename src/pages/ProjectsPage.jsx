@@ -28,11 +28,19 @@ const projects = [
   }
 ]
 
+import { Helmet } from 'react-helmet-async';
+
 export default function ProjectsPage() {
   const navigate = useNavigate()
 
   return (
-    <div
+    <>
+      <Helmet>
+        <title>Our Projects | MadeByHuman Web Design Agency</title>
+        <meta name="description" content="Explore our portfolio of premium websites, creative concepts, and high-converting landing pages built by MadeByHuman." />
+        <link rel="canonical" href="https://madebyhuman.tech/projects" />
+      </Helmet>
+      <div
       className="
         max-w-[1450px]
         mx-auto
@@ -223,5 +231,6 @@ export default function ProjectsPage() {
         ))}
       </div>
     </div>
+    </>
   )
 }

@@ -1,10 +1,17 @@
 import { ArrowLeft } from "lucide-react"
 import { useNavigate } from "react-router-dom"
+import { Helmet } from 'react-helmet-async';
 
 export default function HireUs(){
   const navigate = useNavigate()
 
   return (
+    <>
+    <Helmet>
+      <title>Hire Us | MadeByHuman Web Design Agency</title>
+      <meta name="description" content="Need a premium website, high-converting landing page, or custom React application? Hire MadeByHuman to elevate your digital presence." />
+      <link rel="canonical" href="https://madebyhuman.tech/hire-us" />
+    </Helmet>
     <div className="min-h-screen bg-[#f5f1ff] flex items-center justify-center p-6 relative">
       {/* Sticky Back Button */}
       <button
@@ -41,5 +48,6 @@ export default function HireUs(){
         </a>
       </div>
     </div>
+    </>
   )
 }
